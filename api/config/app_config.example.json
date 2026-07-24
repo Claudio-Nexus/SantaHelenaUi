@@ -1,0 +1,44 @@
+{
+  "app_env": "production",
+  "auth": {
+    "mode": "azure_app_service_easy_auth",
+    "allow_local_fallback": false
+  },
+  "cors_origins": [
+    "https://SEU-APP.azurewebsites.net"
+  ],
+  "current_user": {
+    "email": "usuario.teste@santahelena.com",
+    "name": "Usuario Teste",
+    "roles": []
+  },
+  "storage": {
+    "provider": "fabric",
+    "tenant_id": "${AZURE_TENANT_ID}",
+    "client_id": "${AZURE_CLIENT_ID}",
+    "client_secret": "${AZURE_CLIENT_SECRET}",
+    "workspace_id": "${FABRIC_WORKSPACE_ID}",
+    "lakehouse_id": "${FABRIC_LAKEHOUSE_ID}"
+  },
+  "power_bi": {
+    "provider": "power_bi_rest",
+    "tenant_id": "${AZURE_TENANT_ID}",
+    "client_id": "${AZURE_CLIENT_ID}",
+    "client_secret": "${AZURE_CLIENT_SECRET}",
+    "workspaces": [
+      {
+        "id": "ws-comercial",
+        "name": "Comercial",
+        "user_role": "Membro",
+        "can_publish": true
+      }
+    ],
+    "authorized_report_prefixes": [
+      "relatorio",
+      "painel",
+      "sop",
+      "comercial",
+      "executivo"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "api": "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000",
+    "check:connections": "python scripts/check_connections.py",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:api": "pytest -q api",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite": "^7.0.2"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
+  }
+}

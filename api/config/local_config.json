@@ -1,0 +1,54 @@
+{
+  "app_env": "local",
+  "auth": {
+    "mode": "local",
+    "allow_local_fallback": true,
+    "provider": "azure_app_service_easy_auth"
+  },
+  "storage": {
+    "provider": "filesystem",
+    "root": "storage/lakehouse"
+  },
+  "cors_origins": [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+  ],
+  "current_user": {
+    "email": "usuario.teste@santahelena.com",
+    "name": "Usuario Teste",
+    "roles": [
+      "data-loader",
+      "bi-publisher"
+    ]
+  },
+  "power_bi": {
+    "service_principal": "spn-bi-publicacao-dev",
+    "workspaces": [
+      {
+        "id": "ws-comercial",
+        "name": "Comercial",
+        "user_role": "Membro",
+        "can_publish": true
+      },
+      {
+        "id": "ws-executivo",
+        "name": "Executivo",
+        "user_role": "Admin",
+        "can_publish": true
+      },
+      {
+        "id": "ws-financeiro",
+        "name": "Financeiro",
+        "user_role": "Visualizador",
+        "can_publish": false
+      }
+    ],
+    "authorized_report_prefixes": [
+      "relatorio",
+      "painel",
+      "sop",
+      "comercial",
+      "executivo"
+    ]
+  }
+}

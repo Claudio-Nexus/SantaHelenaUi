@@ -1,0 +1,10 @@
+node_modules/
+storage/
+__pycache__/
+*.py[cod]
+.env
+api/config/app_config.json
+.venv/
+venv/
+.pytest_cache/
+.vite/

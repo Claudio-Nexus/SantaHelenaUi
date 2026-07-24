@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+gunicorn
+python-multipart
+pandas
+openpyxl
+msal
+requests
+pyarrow
